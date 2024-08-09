@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="container mx-auto my-10">
+    <div className="container max-w-7xl mx-auto my-10">
       <h1 className="text-3xl font-bold mb-4">About Us</h1>
       <p className="mb-4">CompanyName is dedicated to providing top-notch products and services.</p>
       <h2 className="text-xl font-bold mb-2">Contact Us</h2>

@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        asap: ['Asap', 'sans-serif'],
+        mochiy: ['Mochiy Pop One', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

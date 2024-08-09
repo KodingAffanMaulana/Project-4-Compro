@@ -16,10 +16,10 @@ const ProductPage: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className="container mx-auto my-10">
+    <div className="container max-w-7xl mx-auto my-10">
       <h1 className="text-3xl font-bold mb-4">Our Products</h1>
       {loading ? (
-        <p>Loading...</p>
+        <p className='h-screen'>Loading...</p>
       ) : error ? (
         <p>Error: {error}</p>
       ) : (

@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
             <img src="/assets/stack.svg" alt="Menu" className='w-10 h-10' />
           </button>
         </div>
-        <div className="hidden md:flex gap-10 items-center">
+        <div className="hidden md:flex gap-10 items-center text-nowrap">
           <Link to="/" className="hover:border-b-2">Home</Link>
           <Link to="/products" className="hover:border-b-2">Products</Link>
           <Link to="/about" className="hover:border-b-2">About Us</Link>

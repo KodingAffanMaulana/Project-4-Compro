@@ -5,7 +5,7 @@ const ServiceCard = ({ icon, title, description }) => {
     <div className="bg-white rounded-l-lg p-3 sm:p-5 xl:p-6 text-center shadow-lg border-[0.5px] border-gray-300 w-full h-full flex flex-col justify-start lg:justify-center">
       <div className="mb-4 flex justify-center">{icon}</div>
       <h3 className="text-mobileSubjudul md:text-webSubjudul font-semibold mb-2">{title}</h3>
-      <p className="text-mobileDesk md:text-webDesk text-gray-600">{description}</p>
+      <p className="text-[11px] md:text-webDesk text-gray-600">{description}</p>
     </div>
   );
 };
@@ -15,7 +15,7 @@ const ServiceCard2 = ({ icon, title, description }) => {
     <div className="bg-white rounded-r-lg p-3 sm:p-5 xl:p-6 text-center shadow-lg border-[0.5px] border-gray-300 w-full h-full flex flex-col justify-start lg:justify-center">
       <div className="mb-4 flex justify-center">{icon}</div>
       <h3 className="text-mobileSubjudul md:text-webSubjudul font-semibold mb-2">{title}</h3>
-      <p className="text-mobileDesk md:text-webDesk text-gray-600">{description}</p>
+      <p className="text-[11px] md:text-webDesk text-gray-600">{description}</p>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import TeamSlider from '../components/Teams';
 const Home: React.FC = () => {
   return (
     <main>
-      <div className="container mx-auto my-10 max-w-7xl min-h-[72.5vh]">
+      <div className="container mx-auto my-10 max-w-7xl">
         <Header />
       </div>
       <WhatWeDo />

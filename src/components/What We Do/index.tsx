@@ -29,23 +29,23 @@ const services: Service[] = [
 const WhatWeDo: React.FC = () => {
   return (
     <div>
-      <div className="flex items-center p-8 container mx-auto my-10 max-w-7xl">
+      <div className="flex flex-col md:flex-row items-center p-5 md:p-8 container mx-auto md:mt-10 max-w-7xl">
         <div className="flex-1 text-center">
           <img
             src="/assets/bg-what.svg"
             alt="What we do"
-            className="rounded-lg max-w-full h-auto shadow-sm"
+            className="rounded-lg max-w-full h-52 md:h-auto shadow-sm"
           />
         </div>
-        <div className="flex-1 pl-8">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">What We Do?</h2>
+        <div className="flex-1">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800 py-5 md:py-0 text-center md:text-left">What We Do?</h2>
           {services.map((service, index) => (
             <div key={index} className="mb-6">
               <div className="flex items-center mb-2">
                 <span className="text-3xl mr-4">{service.icon}</span>
-                <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
+                <h3 className="md:text-2xl font-semibold text-gray-800">{service.title}</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed whitespace-pre-line">{service.description}</p>
+              <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">{service.description}</p>
             </div>
           ))}
         </div>
@@ -55,9 +55,9 @@ const WhatWeDo: React.FC = () => {
           <img
             src="/assets/bg-work.svg"
             alt="How We Work"
-            className="rounded-lg max-w-full w-[4000px] h-[400px] object-cover shadow-lg"
+            className="rounded-lg max-w-full w-[4000px] h-[300px] md:h-[400px] object-cover shadow-lg"
           />
-          <div className="absolute bg-white p-8 shadow-xl -translate-x-1/4">
+          <div className="absolute bg-white p-8 shadow-xl md:-translate-x-1/4">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">How We Work?</h2>
             <p className="text-gray-600 mb-6">Let's discuss what projects you have in mind</p>
             <button className="bg-gray-800 text-white py-2 px-6 rounded-full">

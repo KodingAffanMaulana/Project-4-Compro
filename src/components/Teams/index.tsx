@@ -36,7 +36,7 @@ const TeamSlider: React.FC = () => {
 
   return (
     <div className="py-10 bg-white text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-10">Our Team</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-10 overflow-hidden">Our Team</h2>
       <Swiper
         spaceBetween={10}
         slidesPerView={3}
@@ -54,14 +54,14 @@ const TeamSlider: React.FC = () => {
           },
         }}
         modules={[Pagination]}
-        className="max-w-4xl"
+        className="max-w-4xl overflow-hidden"
       >
         {teamMembers.map((member, index) => (
-          <SwiperSlide key={index} className="flex flex-col justify-center items-center transition-transform duration-300">
+          <SwiperSlide key={index} className="flex flex-col justify-center items-center transition-transform duration-300 overflow-hidden">
             <img
               src={member.image}
               alt={member.name}
-              className={`rounded-full mb-4 object-cover flex items-center transition-transform duration-300 ${index === activeIndex ? 'w-64 h-64' : 'w-52 h-52'
+              className={`overflow-hidden rounded-full mb-4 object-cover flex items-center transition-transform duration-300 ${index === activeIndex ? 'md:w-64 md:h-64' : 'md:w-52 md:h-52'
                 }`}
             />
             <h3 className={`text-xl font-semibold ${index === activeIndex ? 'text-gray-800' : 'text-gray-500'}`}>

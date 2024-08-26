@@ -4,9 +4,9 @@ const AboutUs: React.FC = () => {
   return (
     <div>
       <div className="container max-w-7xl mx-auto mt-10">
-        <h1 className="text-3xl font-bold mb-4">About Us</h1>
-        <p className="mb-4">CompanyName is dedicated to providing top-notch products and services.</p>
-        <h2 className="text-xl font-bold mb-2">Contact Us</h2>
+        <h1 className="text-2xl font-bold mb-4">About Us</h1>
+        <p className="mb-4">New Insights is dedicated to providing top-notch products and services. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, animi! Vel qui et velit id praesentium hic iste quibusdam dolorem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis ex, incidunt doloribus maiores neque dolorum exercitationem cum veniam. Deserunt similique illum, deleniti at corrupti ipsa quas ipsum debitis! Minima dignissimos, architecto asperiores tempora dicta ab illum quam repellat odio repudiandae!</p>
+        <h2 className="text-xl font-bold mb-2">Our Contact</h2>
         <form className="space-y-4">
           <div>
             <label className="block text-gray-700">Name</label>

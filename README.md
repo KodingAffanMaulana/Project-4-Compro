@@ -1,50 +1,98 @@
-# React + TypeScript + Vite
+# Company Profile: New Insights
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project includes the following pages:
+
+1. **Home**: A landing page for the company.
+2. **Product Page**: Displays products using data fetched via an API.
+3. **About Us**:
+   - **Contact Information**: Includes contact details.
+   - **Google Maps**: Displays company address on Google Maps.
+   - **Additional Company Profile Information**: Provides other relevant details.
+   - **Contact Form**: Allows visitors to send messages.
+
+Feel free to adjust and extend the pages and configuration as needed for your application.
+
+This template provides a minimal setup to get React working with Vite, including Hot Module Replacement (HMR) and some ESLint rules.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md): Uses [Babel](https://babeljs.io/) for Fast Refresh.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc): Uses [SWC](https://swc.rs/) for Fast Refresh.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started with this template, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clone the repository:**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   git clone https://github.com/KodingAffanMaulana/Project-4-Compro.git
+   cd Project-4-Compro
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Install dependencies:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   Or if you prefer using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Or with Yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+   This will start the development server and you can view your app in the browser at `http://localhost:5173/`.
+
+## Expanding the ESLint Configuration
+
+For production applications, it's recommended to update the ESLint configuration to enable type-aware lint rules:
+
+1. Configure the top-level `parserOptions` property:
+
+   ```js
+   // eslint.config.js
+   import tseslint from 'eslint-config-ts';
+
+   export default tseslint.config({
+     languageOptions: {
+       parserOptions: {
+         project: ['./tsconfig.node.json', './tsconfig.app.json'],
+         tsconfigRootDir: import.meta.url,
+       },
+     },
+   });
+   ```
+
+2. Replace `tseslint.configs.recommended` with `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`.
+3. Optionally, add `...tseslint.configs.stylisticTypeChecked`.
+4. Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+
+   ```js
+   // eslint.config.js
+   import react from 'eslint-plugin-react';
+   import tseslint from 'eslint-config-ts';
+
+   export default tseslint.config({
+     settings: { react: { version: '18.3' } },
+     plugins: {
+       react,
+     },
+     rules: {
+       ...react.configs.recommended.rules,
+       ...react.configs['jsx-runtime'].rules,
+     },
+   });
+   ```

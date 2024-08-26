@@ -22,7 +22,7 @@ const OurCustomers: React.FC = () => {
   return (
     <div className="container mx-auto pt-10 md:pt-0 md:pb-10  max-w-7xl bg-white text-center">
       <h2 className="text-3xl font-bold text-gray-800 mb-2">Our Customers</h2>
-      <p className="text-xl text-gray-600 md:mb-10">are our biggest fans</p>
+      <p className="text-sm md:text-xl text-gray-600 md:mb-10 ">are our biggest fans</p>
       <div className="flex-wrap justify-center items-center gap-3 grid col-span-5 grid-cols-3 md:grid-cols-5 px-5">
         {logos.map((logo, index) => (
           <img

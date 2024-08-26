@@ -1,12 +1,10 @@
-import React from 'react'
-
 const Header = () => {
   return (
     <div className='flex flex-col md:flex-row w-full justify-between'>
       <div className='md:w-1/2 flex flex-col items-center'>
         <div>
           <div>
-            <h1 className='text-[32px] md:text-[64px] font-semibold w-[345px] text-wrap font leading-[60px]'>
+            <h1 className='text-[32px] md:text-[64px] font-semibold w-[345px] text-wrap leading-[60px]'>
               We Code
               We Deliver
             </h1>

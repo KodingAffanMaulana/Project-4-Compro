@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     <section className="md:my-10 mx-5 md:mx-auto max-w-7xl md:py-8 md:pt-10 md:pb-10">
       <div className="flex flex-col lg:flex-row w-full gap-5 lg:h-[380px] xl:h-[380px]">
         <div className="w-full lg:w-1/2 flex flex-col gap-3">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">  <span className="text-blue-500 mr-1 md:mr-[2px]">Why </span>Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">Why Choose Us?</h2>
           <p className="text-sm">
             Active in Indonesia's IT development since 2022 with software services, digital marketing strategies, and quality IT solutions.
           </p>

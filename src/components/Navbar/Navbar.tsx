@@ -10,14 +10,14 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white font-semibold p-4 border-b-2 border-dashed max-w-7xl mx-auto ">
-      <div className="h-[50px] flex justify-between items-center w-full ">
+      <div className="flex justify-between items-center w-full ">
         {/* hamburger menu */}
         <Link to="/" className="text-xl w-full">
-          New <span className="font-asap text-green-600 font-bold">Insights</span>
+          New <span className="font-asap font-bold">Insights</span>
         </Link>
         <div className="w-full md:hidden flex justify-end">
-          <button onClick={toggleSidebar} aria-label="Toggle menu">
-            <img src="/assets/stack.svg" alt="Menu" className='w-10 h-10' />
+          <button onClick={toggleSidebar} aria-label="Toggle menu" className='z-40'>
+            <img src={`${!isSidebarOpen ? "/assets/stack.svg" : "/assets/close.svg"} `} alt="Menu" className='w-7 h-7' />
           </button>
         </div>
         <div className="hidden md:flex gap-10 items-center text-nowrap">
@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
         className={`fixed top-0 right-0 w-64 h-screen bg-white shadow-lg transform transition-transform ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
           } md:hidden`}
       >
-        <div className='w-full flex justify-end p-4'>
+        {/* <div className='w-full flex justify-end p-4'>
           <img src="/assets/close.svg" alt="Hamburger close" className='w-10 h-10 cursor-pointer' onClick={toggleSidebar} />
-        </div>
+        </div> */}
         <div className="flex flex-col items-center mt-20">
           <Link to="/" className="p-4 hover:bg-gray-200 w-full text-center">Home</Link>
           <Link to="/products" className="p-4 hover:bg-gray-200 w-full text-center">Products</Link>

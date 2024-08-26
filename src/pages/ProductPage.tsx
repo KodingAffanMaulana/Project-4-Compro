@@ -2,8 +2,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../redux/actions/productActions';
-import ProductCard from '../components/ProductCard';
+import ProductCard from '../components/ProductCard/ProductCard';
 import { AppDispatch, RootState } from '../types/types';
+import { Link } from 'react-router-dom';
+import Loader from '../components/Atoms/Loader';
 
 const ProductPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,13 +21,15 @@ const ProductPage: React.FC = () => {
     <div className="container max-w-7xl mx-auto my-10">
       <h1 className="text-3xl font-bold mb-4">Our Products</h1>
       {loading ? (
-        <p className='h-screen'>Loading...</p>
+        <Loader />
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.map((product: any) => (
-            <ProductCard key={product.id} product={product} />
+            <Link to={`/products/${product.id}`}>
+              <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
       )}

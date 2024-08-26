@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <div className='fixed inset-0 min-h-screen flex justify-center items-center bg-gray-900 bg-opacity-50'>
       <div className='relative'>
